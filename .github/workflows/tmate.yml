@@ -1,8 +1,8 @@
 name: Create VPS
  
 on:
-  workflow_dispatch:          
-  repository_dispatch:        
+  workflow_dispatch:          # ✅ Manual "Run workflow" button
+  repository_dispatch:        # ✅ Can still be triggered by API or other workflows
     types: [create-vps]
  
 jobs:
@@ -51,3 +51,4 @@ jobs:
         run: |
           echo "⏳ Keeping session alive for 6 hours..."
           sleep $((360 * 60))
+ 
